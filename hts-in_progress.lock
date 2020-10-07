@@ -1,7 +1,0 @@
-Mirror in progress since Mon, 05 Oct 2020 16:42:55 .. please wait!
-winhttrack https://www.gutenberg.org/ -O ""/Users/adamundus/Documents/School/Senior\ D/reading-list/Project Gutenberg Reading List"" -%v 
-To pause the engine: create an empty file named 'hts-stop.lock'
-PID=37807
-UID=501
-GID=501
-START=1601930575
