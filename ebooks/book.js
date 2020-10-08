@@ -3,7 +3,8 @@
     const url = window.location && window.location.toString().split('/');
     const bookId = url[url.length - 1].match(/(\d+)/)[0];
 
-    if (JSON.parse(localStorage.getItem('booklist'))[bookId]) {
+    const currentList = JSON.parse(localStorage.getItem('booklist'));
+    if (currentList && currentList[bookId]) {
         // book already in list
         addbtn.html('Remove book from My Book List')
         addbtn.css("background-color", "indianred");
@@ -31,7 +32,7 @@
             bookId: bookId,
             imgSrc: $('img.cover-art').attr('src'),
             author: author,
-            url: window.location
+            url: window.location.href
         };
 
         const newList = { ...JSON.parse(localStorage.getItem('booklist')) };
