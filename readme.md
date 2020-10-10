@@ -1,7 +1,7 @@
-## Setup Instructions
+## HOW TO SETUP
+Here are some instruction given below:
 
 Setup is very simple as all the content as of now is static.
-
 1. Pull the github repository
 2. Open index.html in your browser 
 3. Note the new *My Booklist* link in the Search and Browse tab.
