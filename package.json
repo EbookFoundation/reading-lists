@@ -1,0 +1,28 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "Setup is very simple as all the content as of now is static.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://aundus@github.com/EbookFoundation/reading-lists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EbookFoundation/reading-lists/issues"
+  },
+  "homepage": "https://github.com/EbookFoundation/reading-lists#readme",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

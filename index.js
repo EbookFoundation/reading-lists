@@ -1,5 +1,3 @@
 (function ($) {
 
-
-
-})(jQuery);
+})(jQuery) // eslint-disable-line
