@@ -1,13 +1,23 @@
-const displayUsingApi = false;
+const displayUsingApi = true;
 (function ($) {
   if (displayUsingApi) {
     // TODO
+    const list = JSON.parse(localStorage.getItem('booklist'))
+    console.log(list)
+    const body = $('#book-list')
 
+    Object.keys(list).forEach((bookId) => {
+      console.log(bookId)
+      jQuery.get(`https://www.gutenberg.org/ebooks/${bookId}.opds`, null, (data, status, jqxhr) => { // eslint-disable-line
+        // TODO parse
+        console.log(data)
+        body.html(data)
+      }, 'text')
+    })
   } else {
     const list = JSON.parse(localStorage.getItem('booklist'))
     console.log(list)
     const body = $('#book-list')
-    console.log()
 
     Object.keys(list).forEach((bookId) => {
       console.log(bookId)
@@ -15,7 +25,7 @@ const displayUsingApi = false;
     })
   }
 
-  function makeListItem (book) {
+  function makeListItem(book) {
     const a = `<a href="${book.url}"><h3>${book.title}</h3></a>`
     const li = `<li><div class="list-item"><img src="${book.imgSrc}"/>${a}<span>Author: ${book.author}</span><div></li>`
     console.log(li)
