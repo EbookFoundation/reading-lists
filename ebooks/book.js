@@ -46,7 +46,7 @@
     console.log(localStorage.getItem('booklist'))
   })
 
-  function removeBook() {
+  function removeBook () {
     const newlist = JSON.parse(localStorage.getItem('booklist'))
     delete newlist[bookId]
     localStorage.setItem('booklist', JSON.stringify(newlist))
