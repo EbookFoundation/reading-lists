@@ -1,4 +1,4 @@
-const displayUsingApi = true;
+const displayUsingApi = false;
 (function ($) {
   if (displayUsingApi) {
     // TODO
