@@ -27,7 +27,10 @@ const displayUsingApi = false;
 
   function makeListItem(book) {
     const a = `<a href="${book.url}"><h3>${book.title}</h3></a>`
-    const li = `<li><div class="list-item"><img src="${book.imgSrc}"/>${a}<span>Author: ${book.author}</span><div></li>`
+    const li = `<li><div class="list-item"><img src="${book.imgSrc}"/>${a}<span>Author: ${book.author}</span><div><div class="social-button booklist">
+        <button title="Add book to My Book List" id="add-to-booklist"
+            style="background-color: cornflowerblue;">+</button>
+    </div></li>`
     console.log(li)
     return li
   }
