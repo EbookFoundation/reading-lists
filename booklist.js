@@ -39,11 +39,20 @@ const displayUsingApi = false;
   }
 
   function makeListItem (id, book) {
-    const a = `<a href="${book.url}"><h3>${book.title}</h3></a>`
-    const li = `<li><div id="${id}" class="list-item"><img src="${book.imgSrc}"/>${a}<span>Author: ${book.author}</span>
-        <button title="Remove From Booklist" class="remove-from-booklist"
-            style="background-color: indianred;">-</button>
-    </div></li>`
+    const li = `<li class="booklink">
+                  <a class="link" href="${book.url}">
+                    <span id="${id}" class="cell leftcell with-cover">
+                      <img class="cover-thumb" src="${book.imgSrc}"/>
+                    </span>
+                    <span class="cell content">
+                      <span class="title">${book.title}</span>
+                      <span class="subtitle">Author: ${book.author}</span>
+                      <button title="Remove From Booklist" class="remove-from-booklist"
+                        style="background-color: indianred;">-</button>
+                    </span>
+                    <span class="hstrut"></span>
+                  </a>
+                </li>`
     return li
   }
 })(jQuery) // eslint-disable-line
